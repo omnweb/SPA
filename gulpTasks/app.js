@@ -20,7 +20,7 @@ function appIMG(cb){
 
 //  Exportar funções usando sistema de modulos do node
 
-module.exports = {
+module.exports = { 
     appHTML,
     appCSS,
     appJS,
