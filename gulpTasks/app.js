@@ -23,7 +23,7 @@ function appCSS() {
 
 function appJS() {
     return gulp.src('src/assets/js/**/*.js')
-        .pipe(babel({ presets: ['ENV'] }))
+        .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()) // Não precisa usar parâmentros, ele vai pegar o código e minificar
         //Usando quando quer obter uma execução disparada por um evento 
         // .on("error", err => console.log(err))  // Tratando evento de erro, é possível concatenar pipes e on

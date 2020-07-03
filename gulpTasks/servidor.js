@@ -2,7 +2,8 @@
 
 const gulp = require('gulp')
 const webserver = require('gulp-webserver')
-const watch = require('gulp-watch') // Será usado para monitorar arquivos
+const { watch } = require('gulp') 
+
 
 function servidor(cb) {
     return gulp.src('build')//Vai ficar acompanhando a pasta build
@@ -15,9 +16,9 @@ function servidor(cb) {
 
 // Monitorar arquivos vai servir para verificar se houveram alterações no build da aplicação, ele chama uma das tasks
 
-function monitorarArquivos(cb) {
-    watch('src/**/*.html', () => gulp.series('appHTML')()) // Sempre que for alterado algum arquivo html, essa função arrow é executada para chamar a task de html e efetuar a alteração.
-        return cb()
+function monitorarArquivos(cb){
+    watch('src/**/*.html', gulp.series('appHTML'))
+    return cb()
 }
 
 module.exports = {
