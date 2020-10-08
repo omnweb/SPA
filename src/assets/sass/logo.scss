@@ -4,11 +4,12 @@ aside.logo {
 
 aside.logo a {
     display: block;
-    padding: 22px 15px;
+    padding: 15px;
 }
 
 aside.logo img {
-    width: 100%;
+    width: 50%;
+    margin-left:23% ;
 }
 
 @media(max-width: $largura-sm-max) {
@@ -18,7 +19,8 @@ aside.logo img {
     }
 
     aside.logo img {
-        padding: 0px 15px;
-        width: $largura-barra-lateral;
+        padding: 0px;
+        width: 40%;
+        margin-left:25% ;
     }
 }
